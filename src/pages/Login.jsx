@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
 class Login extends Component {
@@ -22,29 +23,42 @@ class Login extends Component {
 
   render() {
     const { nameValue, validName } = this.state;
+    const { isLoading, handleSubmit } = this.props;
 
     return (
       <div data-testid="page-login">
-        <h2>Login</h2>
-        <form action="">
-          <label htmlFor="user-name">Nome:</label>
-          <input
-            type="text"
-            id="user-name"
-            data-testid="login-name-input"
-            value={ nameValue }
-            onChange={ this.handleChange }
-          />
-          <button
-            data-testid="login-submit-button"
-            disabled={ !validName }
-          >
-            Entrar
-          </button>
-        </form>
+        {isLoading
+          ? (<div>Carregando...</div>)
+          : (
+            <>
+              <h2>Login</h2>
+              <form action="">
+                <label htmlFor="user-name">Nome:</label>
+                <input
+                  type="text"
+                  id="user-name"
+                  data-testid="login-name-input"
+                  value={ nameValue }
+                  onChange={ this.handleChange }
+                />
+                <button
+                  type="submit"
+                  data-testid="login-submit-button"
+                  disabled={ !validName }
+                  onClick={ () => handleSubmit(nameValue) }
+                >
+                  Entrar
+                </button>
+              </form>
+            </>)}
       </div>
     );
   }
 }
+
+Login.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+};
 
 export default Login;
