@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import Loading from '../components/Loading';
 
 class Login extends Component {
   state = {
@@ -28,7 +29,7 @@ class Login extends Component {
     return (
       <div data-testid="page-login">
         {isLoading
-          ? (<div>Carregando...</div>)
+          ? (<Loading />)
           : (
             <>
               <h2>Login</h2>
