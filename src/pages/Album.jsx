@@ -41,11 +41,13 @@ class Album extends Component {
         <div>
           {slicedAlbumData
             ? slicedAlbumData
-              .map(({ trackName, previewUrl, trackId }) => (
+              .map((element) => (
                 <MusicCard
-                  key={ trackId }
-                  trackName={ trackName }
-                  previewUrl={ previewUrl }
+                  key={ element.trackId }
+                  trackName={ element.trackName }
+                  previewUrl={ element.previewUrl }
+                  trackId={ element.trackId }
+                  musicData={ element }
                 />
               ))
             : ''}
