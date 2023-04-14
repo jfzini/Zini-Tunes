@@ -37,7 +37,6 @@ class Search extends Component {
       isSearching: true,
     });
     const albums = await searchAlbumsAPI(searchQuery);
-    console.log(albums);
     this.setState({
       searchQuery: '',
       isSearching: false,

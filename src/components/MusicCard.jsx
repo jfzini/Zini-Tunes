@@ -9,6 +9,16 @@ class MusicCard extends Component {
     isLoading: false,
   };
 
+  componentDidMount() {
+    const { favoriteSongs, musicData } = this.props;
+    const favoriteSongsIds = favoriteSongs.map(({ trackId }) => trackId);
+    if (favoriteSongsIds.includes(musicData.trackId)) {
+      this.setState({
+        isFavorite: true,
+      });
+    }
+  }
+
   handleChange = async ({ target: { checked } }) => {
     const { musicData } = this.props;
     this.setState({
@@ -55,41 +65,9 @@ MusicCard.propTypes = {
   trackName: PropTypes.string.isRequired,
   trackId: PropTypes.number.isRequired,
   musicData: PropTypes.shape({
-    artistId: PropTypes.number.isRequired,
-    artistName: PropTypes.string.isRequired,
-    artistViewUrl: PropTypes.string.isRequired,
-    artworkUrl100: PropTypes.string.isRequired,
-    artworkUrl30: PropTypes.string.isRequired,
-    artworkUrl60: PropTypes.string.isRequired,
-    collectionArtistId: PropTypes.number.isRequired,
-    collectionArtistName: PropTypes.string.isRequired,
-    collectionArtistViewUrl: PropTypes.string.isRequired,
-    collectionCensoredName: PropTypes.string.isRequired,
-    collectionExplicitness: PropTypes.string.isRequired,
-    collectionId: PropTypes.number.isRequired,
-    collectionName: PropTypes.string.isRequired,
-    collectionPrice: PropTypes.number.isRequired,
-    collectionViewUrl: PropTypes.string.isRequired,
-    country: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-    discCount: PropTypes.number.isRequired,
-    discNumber: PropTypes.number.isRequired,
-    isStreamable: PropTypes.bool.isRequired,
-    kind: PropTypes.string.isRequired,
-    previewUrl: PropTypes.string.isRequired,
-    primaryGenreName: PropTypes.string.isRequired,
-    releaseDate: PropTypes.string.isRequired,
-    trackCensoredName: PropTypes.string.isRequired,
-    trackCount: PropTypes.number.isRequired,
-    trackExplicitness: PropTypes.string.isRequired,
     trackId: PropTypes.number.isRequired,
-    trackName: PropTypes.string.isRequired,
-    trackNumber: PropTypes.number.isRequired,
-    trackPrice: PropTypes.number.isRequired,
-    trackTimeMillis: PropTypes.number.isRequired,
-    trackViewUrl: PropTypes.string.isRequired,
-    wrapperType: PropTypes.string.isRequired,
   }).isRequired,
+  favoriteSongs: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default MusicCard;

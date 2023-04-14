@@ -37,14 +37,11 @@ export default AlbumCard;
 
 AlbumCard.propTypes = {
   album: PropTypes.shape({
-    artistId: PropTypes.number,
     artistName: PropTypes.string.isRequired,
     collectionId: PropTypes.number.isRequired,
     collectionName: PropTypes.string.isRequired,
     collectionPrice: PropTypes.number.isRequired,
     artworkUrl100: PropTypes.string.isRequired,
-    releaseDate: PropTypes.string,
-    trackCount: PropTypes.number,
   }),
 };
 
