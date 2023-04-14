@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
+import searchAlbumsAPI from '../services/searchAlbumsAPI';
+import Loading from '../components/Loading';
+import { Link } from 'react-router-dom';
 
 class Search extends Component {
   state = {
     searchQuery: '',
     isDisabled: false,
+    isSearching: false,
+    searched: undefined,
+    albumsList: [],
   };
 
   validateQuery = (value) => {
@@ -16,31 +22,72 @@ class Search extends Component {
 
   handleChange = ({ target }) => {
     const { value } = target;
+    this.setState(
+      {
+        searchQuery: value,
+      },
+      () => this.validateQuery(value),
+    );
+  };
+
+  handleClick = async (e) => {
+    e.preventDefault();
+    const { searchQuery } = this.state;
     this.setState({
-      searchQuery: value,
-    }, () => this.validateQuery(value));
+      isSearching: true,
+    });
+    const albums = await searchAlbumsAPI(searchQuery);
+    console.log(albums);
+    this.setState({
+      searchQuery: '',
+      isSearching: false,
+      searched: searchQuery,
+      albumsList: albums,
+    });
   };
 
   render() {
-    const { isDisabled, searchQuery } = this.state;
+    const { isDisabled, searchQuery, isSearching, searched, albumsList } = this.state;
 
     return (
       <div data-testid="page-search">
         <Header />
         <h2>Search</h2>
-        <form action="">
-          <input
-            type="text"
-            data-testid="search-artist-input"
-            id="search-artist"
-            placeholder="Nome do artista"
-            onChange={ this.handleChange }
-            value={ searchQuery }
-          />
-          <button data-testid="search-artist-button" disabled={ !isDisabled }>
-            Pesquisar
-          </button>
-        </form>
+        {isSearching ? (
+          <Loading />
+        ) : (
+          <form action="">
+            <input
+              type="text"
+              data-testid="search-artist-input"
+              id="search-artist"
+              placeholder="Nome do artista"
+              onChange={this.handleChange}
+              value={searchQuery}
+            />
+            <button
+              data-testid="search-artist-button"
+              disabled={!isDisabled}
+              onClick={(e) => this.handleClick(e)}
+            >
+              Pesquisar
+            </button>
+          </form>
+        )}
+        {searched
+        ? (<p>Resultado de álbuns de: {searched}</p>)
+        : (null)}
+        {albumsList.length > 0
+        ? (albumsList.map(({collectionId, collectionName}) => (
+          <div>
+            {collectionId}
+            <Link
+              to={`/album/${collectionId}`}
+              data-testid={`link-to-album-${collectionId}`}
+            >{collectionName}</Link>
+          </div>
+        )))
+        : (<p>Nenhum álbum foi encontrado</p>)}
       </div>
     );
   }
