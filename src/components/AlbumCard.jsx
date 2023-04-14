@@ -18,7 +18,10 @@ class AlbumCard extends Component {
       <div key={ collectionId }>
         <img src={ artworkUrl100 } alt={ collectionName } />
         <Link
-          to={ `/album/${collectionId}` }
+          to={ {
+            pathname: `/album/${collectionId}`,
+            state: { name: artistName },
+          } }
           data-testid={ `link-to-album-${collectionId}` }
         >
           {collectionName}
