@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from '../components/Loading';
-import { Link } from 'react-router-dom';
+import AlbumCard from '../components/AlbumCard';
 
 class Search extends Component {
   state = {
@@ -62,32 +62,28 @@ class Search extends Component {
               data-testid="search-artist-input"
               id="search-artist"
               placeholder="Nome do artista"
-              onChange={this.handleChange}
-              value={searchQuery}
+              onChange={ this.handleChange }
+              value={ searchQuery }
             />
             <button
               data-testid="search-artist-button"
-              disabled={!isDisabled}
-              onClick={(e) => this.handleClick(e)}
+              disabled={ !isDisabled }
+              onClick={ (e) => this.handleClick(e) }
             >
               Pesquisar
             </button>
           </form>
         )}
         {searched
-        ? (<p>Resultado de álbuns de: {searched}</p>)
-        : (null)}
+          ? (
+            <p>
+              {`Resultado de álbuns de: ${searched}`}
+            </p>)
+          : null}
         {albumsList.length > 0
-        ? (albumsList.map(({collectionId, collectionName}) => (
-          <div>
-            {collectionId}
-            <Link
-              to={`/album/${collectionId}`}
-              data-testid={`link-to-album-${collectionId}`}
-            >{collectionName}</Link>
-          </div>
-        )))
-        : (<p>Nenhum álbum foi encontrado</p>)}
+          ? (albumsList
+            .map((album) => <AlbumCard album={ album } key={ album.collectionId } />))
+          : (<p>Nenhum álbum foi encontrado</p>)}
       </div>
     );
   }
