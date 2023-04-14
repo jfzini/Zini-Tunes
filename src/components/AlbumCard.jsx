@@ -40,15 +40,13 @@ AlbumCard.propTypes = {
     artistName: PropTypes.string.isRequired,
     collectionId: PropTypes.number.isRequired,
     collectionName: PropTypes.string.isRequired,
-    collectionPrice: PropTypes.number.isRequired,
+    collectionPrice: PropTypes.number,
     artworkUrl100: PropTypes.string.isRequired,
   }),
 };
 
 AlbumCard.defaultProps = {
   album: PropTypes.shape({
-    artistId: null,
-    releaseDate: null,
-    trackCount: null,
+    collectionPrice: 0.00,
   }),
 };
