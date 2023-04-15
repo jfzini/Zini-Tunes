@@ -30,9 +30,12 @@ class MusicCard extends Component {
     } else {
       await removeSong(musicData);
     }
-    this.setState({
-      isLoading: false,
-    });
+    const magicNumber = 500;
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+      });
+    }, magicNumber);
   };
 
   render() {
@@ -40,23 +43,28 @@ class MusicCard extends Component {
     const { isLoading, isFavorite } = this.state;
     return (
       <div>
-        <p>{trackName}</p>
-        <audio data-testid="audio-component" src={ previewUrl } controls>
-          <track kind="captions" />
-          O seu navegador não suporta o elemento
-          <code>audio</code>
-          .
-        </audio>
-        <label htmlFor="checkbox-favorite">Favorita</label>
-        <input
-          type="checkbox"
-          name="checkbox-favorite"
-          id="checkbox-favorite"
-          data-testid={ `checkbox-music-${trackId}` }
-          onChange={ this.handleChange }
-          checked={ isFavorite }
-        />
-        {isLoading && <Loading />}
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <>
+            <p>{trackName}</p>
+            <audio data-testid="audio-component" src={ previewUrl } controls>
+              <track kind="captions" />
+              O seu navegador não suporta o elemento
+              <code>audio</code>
+              .
+            </audio>
+            <label htmlFor={ trackId }>Favorita</label>
+            <input
+              type="checkbox"
+              name={ trackId }
+              id={ trackId }
+              data-testid={ `checkbox-music-${trackId}` }
+              onChange={ this.handleChange }
+              checked={ isFavorite }
+            />
+          </>
+        )}
       </div>
     );
   }
