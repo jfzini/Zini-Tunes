@@ -36,6 +36,7 @@ class Profile extends Component {
           : (
             <section>
               <p>{name}</p>
+              <p>{name}</p>
               <p>{email}</p>
               <img src={ image } alt={ name } data-testid="profile-image" />
               <p>{description}</p>
