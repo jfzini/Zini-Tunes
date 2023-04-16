@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Loading from '../components/Loading';
+import './css/Login.css';
 
 class Login extends Component {
   state = {
@@ -27,13 +28,13 @@ class Login extends Component {
     const { isLoading, handleSubmit } = this.props;
 
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className='login__container'>
         {isLoading
           ? (<Loading />)
           : (
             <>
-              <h2>Login</h2>
-              <form action="">
+              <h2 className='login__title'>Login</h2>
+              <form action="" className='login__form'>
                 <label htmlFor="user-name">Nome:</label>
                 <input
                   type="text"

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { ScaleLoader } from 'react-spinners';
 
 class Loading extends Component {
   render() {
     return (
-      <div>Carregando...</div>
+      <ScaleLoader color="#36d7b7" />
     );
   }
 }
