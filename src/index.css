@@ -72,6 +72,17 @@
 
 }
 
+@keyframes slideUp {
+
+  from {
+    bottom: 0%;
+  }
+
+  to {
+    bottom: 10%;
+  }
+}
+
 
 * {
   font-family: 'Josefin Sans', sans-serif;

@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from '../components/Loading';
 import AlbumCard from '../components/AlbumCard';
-import './css/Search.css'
+import './css/Search.css';
 
 class Search extends Component {
   state = {
@@ -52,12 +52,12 @@ class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <section className='search__container'>
+        <section className="search__container">
           <h2>Search</h2>
           {isSearching ? (
             <Loading />
           ) : (
-            <form action="" className='search__form'>
+            <form action="" className="search__form">
               <input
                 type="text"
                 data-testid="search-artist-input"
@@ -77,16 +77,16 @@ class Search extends Component {
           )}
           {searched
             ? (
-              <p className='results__parag'>
+              <p className="results__parag">
                 {`Results of: ${searched}`}
               </p>)
             : null}
-            <div className={`results__container ${albumsList.length > 0 ? "" : "hidden"}`}>
+          <div className={ `results__container ${albumsList.length > 0 ? '' : 'hidden'}` }>
             {albumsList.length > 0
               ? (albumsList
                 .map((album) => <AlbumCard album={ album } key={ album.collectionId } />))
-              : (<p></p>)}
-            </div>
+              : (<p />)}
+          </div>
         </section>
       </div>
     );
