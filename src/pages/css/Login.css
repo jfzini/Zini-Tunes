@@ -1,21 +1,18 @@
 @keyframes changeBorderColor {
 
   0%, 100% {
-    border: 2px solid #00e5c6;
-    box-shadow: 0 0 20px 10px #00e5c63a;
-
+    border: 2px solid #00b0e5;
+    box-shadow: 0 0 20px 10px #00b0e53a;
   }
 
   33% {
-    border: 2px solid #00e513;
-    box-shadow: 0 0 20px 10px #00e5133a;
-
+    border: 2px solid #00f7ff;
+    box-shadow: 0 0 20px 10px #00f7ff3a;
   }
 
   66% {
     border: 2px solid #00ff80;
     box-shadow: 0 0 20px 10px #00ff803a;
-
   }
 }
 
@@ -71,7 +68,8 @@
 }
 
 .login__form input, .login__form button {
-  box-shadow: inset 0px 0px 5px #018552;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px #018552;
   font-size: 1.5rem;
   padding: 10px;
   text-align: center;

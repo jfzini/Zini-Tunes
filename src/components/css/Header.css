@@ -1,0 +1,61 @@
+@keyframes changeShadowColor {
+
+  0%, 100% {
+    box-shadow: 0 1px 5px #00e5c6b0;
+  }
+
+  33% {
+    box-shadow: 0 1px 5px #00e513b0;
+  }
+
+  66% {
+    box-shadow: 0 1px 5px #00ff80b0;
+  }
+}
+
+header {
+  align-items: center;
+  animation: changeShadowColor 6s ease-in-out infinite;
+  background-color: rgb(23, 29, 27);
+  display: flex;
+  height: 80px;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.header__logo img {
+  height: 60px;
+  margin-right: 40px;
+}
+
+.header__logo {
+  align-items: center;
+  display: flex;
+}
+
+.header__navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 30vw;
+}
+
+.header__navbar a {
+  background-color: rgba(0, 0, 0, 0.61);
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  border-radius: 20px;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  padding: 6px 24px 4px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__navbar a:hover {
+  background-color: rgba(245, 245, 245, 0.89);
+  color: rgb(0, 39, 27);
+}
+
+.header__username {
+  font-size: 1.7rem;
+  width: 30vw;
+}

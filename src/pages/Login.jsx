@@ -28,13 +28,13 @@ class Login extends Component {
     const { isLoading, handleSubmit } = this.props;
 
     return (
-      <div data-testid="page-login" className='login__container'>
+      <div data-testid="page-login" className="login__container">
         {isLoading
           ? (<Loading />)
           : (
             <>
-              <h2 className='login__title'>Login</h2>
-              <form action="" className='login__form'>
+              <h2 className="login__title">Login</h2>
+              <form action="" className="login__form">
                 <label htmlFor="user-name">Nome:</label>
                 <input
                   type="text"
