@@ -5,6 +5,7 @@ import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
+import './css/Album.css';
 
 class Album extends Component {
   state = {
@@ -65,25 +66,36 @@ class Album extends Component {
         ) : (
           <>
             <Header />
-            <div className="album__data">
-              <img src={ albumPicUrl } alt="" />
-              <p data-testid="album-name">{albumName ? `${albumName}` : ''}</p>
-              <p data-testid="artist-name">{artist ? `${artist}` : ''}</p>
-            </div>
-            <div>
-              {slicedAlbumData
-                ? slicedAlbumData.map((element) => (
-                  <MusicCard
-                    key={ element.trackId }
-                    trackName={ element.trackName }
-                    previewUrl={ element.previewUrl }
-                    trackId={ element.trackId }
-                    musicData={ element }
-                    favoriteSongs={ favoriteSongs }
-                  />
-                ))
-                : ''}
-            </div>
+            <section className="results__container album__container">
+              <div className="album__data">
+                <img src={ albumPicUrl } alt="" />
+                <div>
+                  <p
+                    data-testid="album-name"
+                    className='album__name'
+                  >{albumName ? `${albumName}` : ''}</p>
+                  <p
+                    data-testid="artist-name"
+                    className='artist__name'
+                  >
+                    {artist ? `${artist}` : ''}</p>
+                </div>
+              </div>
+              <div>
+                {slicedAlbumData
+                  ? slicedAlbumData.map((element) => (
+                    <MusicCard
+                      key={ element.trackId }
+                      trackName={ element.trackName }
+                      previewUrl={ element.previewUrl }
+                      trackId={ element.trackId }
+                      musicData={ element }
+                      favoriteSongs={ favoriteSongs }
+                    />
+                  ))
+                  : ''}
+              </div>
+            </section>
           </>
         )}
       </div>

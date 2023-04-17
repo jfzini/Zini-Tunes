@@ -1,0 +1,26 @@
+.album__container {
+  flex-direction: column;
+  margin: 80px auto;
+  max-width: 60vw;
+}
+
+.album__data {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.album__data img {
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px black;
+}
+
+.album__name {
+  font-size: 4rem;
+  margin: 40px;
+}
+
+.artist__name {
+  color: rgb(190, 190, 190);
+  font-size: 2rem;
+  margin: 45px;
+}
