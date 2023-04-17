@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 import Loading from '../components/Loading';
 import AlbumCard from '../components/AlbumCard';
+import './css/Search.css'
 
 class Search extends Component {
   state = {
@@ -51,38 +52,42 @@ class Search extends Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <h2>Search</h2>
-        {isSearching ? (
-          <Loading />
-        ) : (
-          <form action="">
-            <input
-              type="text"
-              data-testid="search-artist-input"
-              id="search-artist"
-              placeholder="Nome do artista"
-              onChange={ this.handleChange }
-              value={ searchQuery }
-            />
-            <button
-              data-testid="search-artist-button"
-              disabled={ !isDisabled }
-              onClick={ (e) => this.handleClick(e) }
-            >
-              Pesquisar
-            </button>
-          </form>
-        )}
-        {searched
-          ? (
-            <p>
-              {`Resultado de álbuns de: ${searched}`}
-            </p>)
-          : null}
-        {albumsList.length > 0
-          ? (albumsList
-            .map((album) => <AlbumCard album={ album } key={ album.collectionId } />))
-          : (<p>Nenhum álbum foi encontrado</p>)}
+        <section className='search__container'>
+          <h2>Search</h2>
+          {isSearching ? (
+            <Loading />
+          ) : (
+            <form action="" className='search__form'>
+              <input
+                type="text"
+                data-testid="search-artist-input"
+                id="search-artist"
+                placeholder="artist's name"
+                onChange={ this.handleChange }
+                value={ searchQuery }
+              />
+              <button
+                data-testid="search-artist-button"
+                disabled={ !isDisabled }
+                onClick={ (e) => this.handleClick(e) }
+              >
+                Search
+              </button>
+            </form>
+          )}
+          {searched
+            ? (
+              <p className='results__parag'>
+                {`Results of: ${searched}`}
+              </p>)
+            : null}
+            <div className={`results__container ${albumsList.length > 0 ? "" : "hidden"}`}>
+            {albumsList.length > 0
+              ? (albumsList
+                .map((album) => <AlbumCard album={ album } key={ album.collectionId } />))
+              : (<p></p>)}
+            </div>
+        </section>
       </div>
     );
   }

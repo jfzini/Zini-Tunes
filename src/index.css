@@ -1,5 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap');
 
+@keyframes changeBorderColor {
+
+  0%, 100% {
+    border: 2px solid #00b0e5;
+    box-shadow: 0 0 10px 4px #00b0e53a;
+  }
+
+  33% {
+    border: 2px solid #00f7ff;
+    box-shadow: 0 0 10px 4px #00f7ff3a;
+  }
+
+  66% {
+    border: 2px solid #00ff80;
+    box-shadow: 0 0 10px 4px #00ff803a;
+  }
+}
+
+@keyframes changeBgColor {
+
+  0%, 100% {
+    background-color: #00e5c6b0;
+  }
+
+  33% {
+    background-color: #00ff95b0;
+  }
+
+  66% {
+    background-color: #00ffbfb0;
+  }
+}
+
+@keyframes float {
+
+  0%, 100% {
+    transform: perspective(800px) rotateY(1deg) rotateX(1deg);
+  }
+
+  50% {
+    transform: perspective(800px) rotateY(-1deg) rotateX(-1deg);
+  }
+
+}
+
+@keyframes changeShadowColor {
+
+  0%, 100% {
+    box-shadow: 0 0 5px 2px #00b0e53a;
+  }
+
+  33% {
+    box-shadow: 0 0 5px 2px #00f7ff3a;
+  }
+
+  66% {
+    box-shadow: 0 0 5px 2px #00ff803a;
+  }
+}
+
+@keyframes appear {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
 * {
   font-family: 'Josefin Sans', sans-serif;
   margin: 0;
@@ -8,8 +81,12 @@
 }
 
 body {
-  background-color: rgb(34, 39, 38);
+  background-color: rgb(37, 37, 37);
   color: whitesmoke;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 .loading {

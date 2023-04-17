@@ -1,22 +1,7 @@
-@keyframes changeShadowColor {
-
-  0%, 100% {
-    box-shadow: 0 1px 5px #00e5c6b0;
-  }
-
-  33% {
-    box-shadow: 0 1px 5px #00e513b0;
-  }
-
-  66% {
-    box-shadow: 0 1px 5px #00ff80b0;
-  }
-}
-
 header {
   align-items: center;
   animation: changeShadowColor 6s ease-in-out infinite;
-  background-color: rgb(23, 29, 27);
+  background-color: rgb(20, 20, 20);
   display: flex;
   height: 80px;
   justify-content: space-around;
@@ -52,7 +37,7 @@ header {
 
 .header__navbar a:hover {
   background-color: rgba(245, 245, 245, 0.89);
-  color: rgb(0, 39, 27);
+  color: rgb(20, 20, 20);
 }
 
 .header__username {
