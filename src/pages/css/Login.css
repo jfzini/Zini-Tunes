@@ -1,7 +1,10 @@
 .login__container {
   align-items: center;
   animation: changeBorderColor 6s linear infinite , float 6s linear infinite;
-  border: 2px solid rgb(0, 248, 174);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   height: 30vw;

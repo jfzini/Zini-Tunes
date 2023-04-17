@@ -81,7 +81,9 @@
 }
 
 body {
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(29, 41, 37);
+  background-image: url('/src/images/fancy-cushion.webp');
+  background-blend-mode: darken;
   color: whitesmoke;
 }
 

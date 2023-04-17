@@ -7,7 +7,7 @@
         "at-rule-name-case": "lower",
         "at-rule-name-space-after": "always",
         "at-rule-no-unknown": true,
-        "at-rule-no-vendor-prefix": true,
+        "at-rule-no-vendor-prefix": null,
         "at-rule-semicolon-newline-after": "always",
         "at-rule-semicolon-space-before": "always",
         "block-closing-brace-newline-after": "always",
@@ -65,7 +65,7 @@
         "media-feature-colon-space-before": "always",
         "media-feature-name-case": "lower",
         "media-feature-name-no-unknown": true,
-        "media-feature-name-no-vendor-prefix": true,
+        "media-feature-name-no-vendor-prefix": null,
         "media-feature-parentheses-space-inside": "always",
         "media-feature-range-operator-space-after": "always",
         "media-feature-range-operator-space-before": "always",
@@ -87,7 +87,7 @@
         "order/properties-alphabetical-order": true,
         "property-case": "lower",
         "property-no-unknown": true,
-        "property-no-vendor-prefix": true,
+        "property-no-vendor-prefix": null,
         "rule-empty-line-before": [
             "always",
             {
@@ -116,7 +116,7 @@
         "selector-max-type": 5,
         "selector-max-universal": 3,
         "selector-no-qualifying-type": true,
-        "selector-no-vendor-prefix": true,
+        "selector-no-vendor-prefix": null,
         "selector-pseudo-class-case": "lower",
         "selector-pseudo-class-no-unknown": true,
         "selector-pseudo-class-parentheses-space-inside": "always",
@@ -135,6 +135,6 @@
         "value-list-comma-space-after": "always",
         "value-list-comma-space-before": "always",
         "value-list-max-empty-lines": 0,
-        "value-no-vendor-prefix": true
+        "value-no-vendor-prefix": null
     }
 }
