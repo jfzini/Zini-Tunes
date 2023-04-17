@@ -33,12 +33,14 @@ class Header extends Component {
         <div className="header__username">
           {isLoading
             ? <Loading />
-            : <div className="header__logo">
-              <Link exact to="/" data-testid="link-to-search">
-                <img src={ logo } alt="logo" />
-              </Link>
-              <span data-testid="header-user-name">{userName}</span>
-              </div>}
+            : (
+              <div className="header__logo">
+                <Link exact to="/" data-testid="link-to-search">
+                  <img src={ logo } alt="logo" />
+                </Link>
+                <span data-testid="header-user-name">{userName}</span>
+              </div>
+            )}
         </div>
         <nav className="header__navbar">
           <Link to="/search" data-testid="link-to-search">Search</Link>

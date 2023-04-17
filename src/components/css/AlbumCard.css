@@ -69,7 +69,7 @@
 
 .album-card__container:hover .play__container {
   align-items: center;
-  animation: appear 0.3s linear , slideUp 0.3s linear;
+  animation: appear 0.2s linear , slideUp 0.2s linear;
   display: flex;
   justify-content: center;
 }

@@ -6,16 +6,21 @@ import './css/AlbumCard.css';
 class AlbumCard extends Component {
   render() {
     const {
-      album: { artistName, collectionId, collectionName, collectionPrice, artworkUrl100 },
+      album: {
+        artistName,
+        collectionId,
+        collectionName,
+        artworkUrl100,
+      },
     } = this.props;
-    const slicedAlbumName = 
-      collectionName.length >= 25
-        ? `${collectionName.slice(0, 25)}...`
-        : collectionName
-    const slicedArtistName = 
-      artistName.length >= 40
-        ? `${artistName.slice(0, 40)}...`
-        : artistName
+    const albumNameLimit = 25;
+    const artistsNamesLimit = 40;
+    const slicedAlbumName = collectionName.length >= albumNameLimit
+      ? `${collectionName.slice(0, albumNameLimit)}...`
+      : collectionName;
+    const slicedArtistName = artistName.length >= artistsNamesLimit
+      ? `${artistName.slice(0, artistsNamesLimit)}...`
+      : artistName;
 
     return (
       <div key={ collectionId } className="album-card__container">
@@ -27,13 +32,16 @@ class AlbumCard extends Component {
             } }
             data-testid={ `link-to-album-${collectionId}` }
           >
-            <img src={ artworkUrl100.replaceAll('100x100bb', '200x200bb') } alt={ collectionName } />
-            <div className='play__container'>
-              <div class="play-triangle"></div>
+            <img
+              src={ artworkUrl100.replaceAll('100x100bb', '200x200bb') }
+              alt={ collectionName }
+            />
+            <div className="play__container">
+              <div className="play-triangle" />
             </div>
           </Link>
         </div>
-        <div className='album-info__container'>
+        <div className="album-info__container">
           <Link
             to={ {
               pathname: `/album/${collectionId}`,
@@ -43,7 +51,7 @@ class AlbumCard extends Component {
           >
             {slicedAlbumName}
           </Link>
-          <p className='album-artist'>{slicedArtistName}</p>
+          <p className="album-artist">{slicedArtistName}</p>
         </div>
       </div>
     );

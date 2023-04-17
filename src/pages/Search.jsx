@@ -81,10 +81,15 @@ class Search extends Component {
                 {`Results of: ${searched}`}
               </p>)
             : null}
-          <div className={ `results__container ${albumsList.length > 0 ? '' : 'hidden'}` }>
+          <div
+            className={ `results__container ${albumsList.length > 0 ? '' : 'hidden'}` }
+          >
             {albumsList.length > 0
               ? (albumsList
-                .map((album) => <AlbumCard album={ album } key={ album.collectionId } />))
+                .map((album) => (<AlbumCard
+                  album={ album }
+                  key={ album.collectionId }
+                />)))
               : (<p />)}
           </div>
         </section>
