@@ -61,6 +61,7 @@ header {
 
   .header__navbar.show-menu {
     align-items: center;
+    animation: appear 0.5s ease-in-out;
     background-color: rgba(0, 0, 0, 0.87);
     border-radius: 20px;
     box-shadow: 0 0 20px rgb(78, 78, 78);

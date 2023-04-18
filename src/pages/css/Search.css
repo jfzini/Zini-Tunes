@@ -56,3 +56,38 @@
 .hidden {
   display: none;
 }
+
+@media screen and ( max-width : 768px ) {
+
+  .search__form {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100vw;
+  }
+
+  .search__form input, .search__form button {
+    margin-top: 20px;
+  }
+
+  .results__parag {
+    left: -20px;
+    position: absolute;
+    top: 280px;
+    width: 90vw;
+  }
+
+  .results__container {
+    margin-top: 100px;
+    width: 85vw;
+  }
+
+}
+
+@media ( min-width : 768px ) and ( max-width : 1024px ) {
+
+  .results__container {
+    width: 85vw;
+  }
+
+}
