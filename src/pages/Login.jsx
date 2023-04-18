@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Loading from '../components/Loading';
 import './css/Login.css';
+import logo from '../images/sound-waves.png';
 
 class Login extends Component {
   state = {
@@ -34,6 +35,7 @@ class Login extends Component {
           : (
             <>
               <h2 className="login__title">Login</h2>
+              <img src={logo} alt="logo" className='login__logo'/>
               <form action="" className="login__form">
                 <label htmlFor="user-name">Nome:</label>
                 <input

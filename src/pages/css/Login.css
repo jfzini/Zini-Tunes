@@ -49,5 +49,11 @@
 
 .login__title {
   position: absolute;
-  top: 5%;
+  top: -12%;
+}
+
+.login__logo {
+  position: absolute;
+  top: 4%;
+  width: 160px;
 }

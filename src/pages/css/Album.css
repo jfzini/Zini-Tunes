@@ -12,6 +12,8 @@
 .album__data img {
   border-radius: 10px;
   box-shadow: 4px 4px 10px black;
+  height: 300px;
+  width: 300px;
 }
 
 .album__name {
