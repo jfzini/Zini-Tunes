@@ -48,6 +48,21 @@
   }
 }
 
+@keyframes changeColor {
+
+  0%, 100% {
+    color: #00b0e5;
+  }
+
+  33% {
+    color: #00f7ff;
+  }
+
+  66% {
+    color: #00ff80;
+  }
+}
+
 @keyframes float {
 
   0%, 100% {

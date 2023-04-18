@@ -1,0 +1,20 @@
+.error__container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 30vh;
+}
+
+.error__title {
+  animation: changeColor 4s linear infinite;
+  font-size: 13rem;
+}
+
+.error__subtitle {
+  font-size: 5rem;
+}
+
+.error__text {
+  font-size: 2rem;
+}

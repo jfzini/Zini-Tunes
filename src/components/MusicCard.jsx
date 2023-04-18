@@ -34,7 +34,7 @@ class MusicCard extends Component {
 
   lowerVolume = () => {
     const allAudios = document.querySelectorAll('audio');
-    allAudios.forEach((audio) => audio.volume = 0.2)
+    allAudios.forEach((audio) => audio.volume = 0.1)
   }
 
   render() {
