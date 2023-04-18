@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
 import MusicCard from '../components/MusicCard';
-import './css/Favorites.css'
+import './css/Favorites.css';
 
 class Favorites extends Component {
   state = {
@@ -40,7 +40,7 @@ class Favorites extends Component {
       <div data-testid="page-favorites">
         <Header />
         <section className="results__container album__container">
-          <h2 className='favorites__title'>Favorite Songs</h2>
+          <h2 className="favorites__title">Favorite Songs</h2>
           {loading
             ? (<Loading />)
             : (favoriteSongs.map((song) => (

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
-import './css/EditProfile.css'
+import './css/EditProfile.css';
 
 class EditProfile extends Component {
   state = {
@@ -89,50 +89,52 @@ class EditProfile extends Component {
     return (
       <div data-testid="page-profile-edit">
         <Header />
-        <section section className="results__container album__container">
+        <section className="results__container album__container">
           {isLoading
             ? (<Loading />)
             : (
-              <section className='edit-profile__general'>
+              <section className="edit-profile__general">
                 <h2>Edit profile</h2>
-                <form className='edit-profile__container'>
-                  <div className='edit-profile__image'>
-                    <div className='profile-image__container'>
-                      <img src={image} alt={name}/>
+                <form className="edit-profile__container">
+                  <div className="edit-profile__image">
+                    <div className="profile-image__container">
+                      <img src={ image } alt={ name } />
                     </div>
-                    <label htmlFor="">Image URL</label>
+                    <label htmlFor="edit-image">Image URL</label>
                     <input
                       type="text"
                       value={ image }
                       name="image"
+                      id="edit-image"
                       data-testid="edit-input-image"
                       onChange={ this.handleChange }
                     />
                   </div>
-                  <div className='profile__data'>
-                    <label htmlFor="">Name</label>
+                  <div className="profile__data">
+                    <label htmlFor="edit-name">Name</label>
                     <input
                       type="text"
                       placeholder="Nome"
                       data-testid="edit-input-name"
                       name="name"
+                      id="edit-name"
                       value={ name }
                       onChange={ this.handleChange }
                     />
-                    <label htmlFor="">E-mail</label>
+                    <label htmlFor="edit-email">E-mail</label>
                     <input
                       type="email"
                       name="email"
-                      id=""
+                      id="edit-email"
                       placeholder="Email"
                       data-testid="edit-input-email"
                       value={ email }
                       onChange={ this.handleChange }
                     />
-                    <label htmlFor="">Description</label>
+                    <label htmlFor="edit-description">Description</label>
                     <textarea
                       name="description"
-                      id=""
+                      id="edit-description"
                       data-testid="edit-input-description"
                       value={ description }
                       onChange={ this.handleChange }
@@ -147,7 +149,7 @@ class EditProfile extends Component {
                   </div>
                 </form>
               </section>
-              )}
+            )}
         </section>
       </div>
     );

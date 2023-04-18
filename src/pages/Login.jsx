@@ -35,7 +35,7 @@ class Login extends Component {
           : (
             <>
               <h2 className="login__title">Login</h2>
-              <img src={logo} alt="logo" className='login__logo'/>
+              <img src={ logo } alt="logo" className="login__logo" />
               <form action="" className="login__form">
                 <label htmlFor="user-name">Nome:</label>
                 <input

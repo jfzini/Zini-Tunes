@@ -78,7 +78,7 @@
   flex-direction: column;
 }
 
-@media screen and ( max-width : 321px ) {
+@media screen and ( max-width : 376px ) {
 
   .profile-image__container {
     max-height: 230px;
@@ -91,7 +91,7 @@
   }
 
   .edit-profile__general {
-    margin-left: -20px;
+    margin-left: -15px;
     max-width: 230px;
   }
 

@@ -34,8 +34,8 @@ class MusicCard extends Component {
 
   lowerVolume = () => {
     const allAudios = document.querySelectorAll('audio');
-    allAudios.forEach((audio) => audio.volume = 0.1)
-  }
+    allAudios.forEach((audio) => audio.volume = 0.1);
+  };
 
   render() {
     const { trackName, previewUrl, trackId } = this.props;
@@ -44,7 +44,7 @@ class MusicCard extends Component {
       <div>
         <p className="track-name">{trackName}</p>
         <div className="audio-track">
-          <audio data-testid="audio-component" src={ previewUrl } volume='0.3' controls>
+          <audio data-testid="audio-component" src={ previewUrl } controls>
             <track kind="captions" />
             O seu navegador não suporta o elemento
             <code>audio</code>

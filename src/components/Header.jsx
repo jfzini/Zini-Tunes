@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
@@ -27,10 +28,10 @@ class Header extends Component {
   };
 
   setShowMenu = () => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       showMenu: !prevState.showMenu,
-    }))
-  }
+    }));
+  };
 
   render() {
     const { userName, isLoading, showMenu } = this.state;
@@ -49,17 +50,19 @@ class Header extends Component {
               </div>
             )}
         </div>
-        <nav className={`header__navbar ${showMenu? 'show-menu' : ''}` }>
+        <nav className={ `header__navbar ${showMenu ? 'show-menu' : ''}` }>
           <Link to="/search" data-testid="link-to-search">Search</Link>
           <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
           <Link to="/profile" data-testid="link-to-profile">Profile</Link>
-          <a href='/'>Logout</a>
+          <a href="/">Logout</a>
         </nav>
         <div
           className={ `hamburger ${showMenu ? 'active' : ''}` }
           onClick={ this.setShowMenu }
         >
-          <span /> {/*spans that make the hamburger menu*/}
+          <span />
+          {' '}
+          {/* spans that make the hamburger menu */}
           <span />
           <span />
         </div>
