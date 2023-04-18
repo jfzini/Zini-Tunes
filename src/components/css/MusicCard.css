@@ -94,3 +94,37 @@ audio::-webkit-media-controls-panel {
     transform: scale(1);
   }
 }
+
+@media screen and ( max-width : 768px ) {
+
+  audio {
+    margin-left: -35px;
+    padding: 17px;
+    transform: scale(0.95);
+    width: 70vw;
+  }
+
+  .checkbox__container {
+    font-size: 15px;
+    margin-left: -15px;
+  }
+
+  .track-name {
+    font-size: 1.2rem;
+    margin: 20px 0 5px -25px;
+  }
+
+}
+
+@media ( min-width : 768px ) and ( max-width : 1024px ) {
+
+  audio {
+    width: 75vw;
+  }
+
+  .checkbox__container {
+    font-size: 15px;
+    margin-left: -10px;
+  }
+
+}

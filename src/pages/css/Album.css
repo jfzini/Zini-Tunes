@@ -52,7 +52,7 @@
   .artist__name {
     font-size: 1.5rem;
     margin: 10px -10px;
-    width: 80vw;
+    width: 75vw;
   }
 
 }
@@ -62,6 +62,5 @@
   .album__container {
     max-width: 85vw;
   }
-
 
 }
