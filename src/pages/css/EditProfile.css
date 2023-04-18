@@ -4,14 +4,20 @@
   flex-direction: column;
   height: 400px;
   justify-content: center;
-  width: 400px;
+  width: 300px;
 }
 
-.edit-profile__image img {
+.profile-image__container {
   border-radius: 20px;
   box-shadow: 5px 5px 10px black , 5px 5px 10px black , 5px 5px 5px black;
-  height: 300px;
-  width: 300px;
+  max-height: 300px;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.profile-image__container img {
+  max-height: 300px;
+  max-width: 300px;
 }
 
 .edit-profile__container {
@@ -28,7 +34,7 @@
 .edit-profile__container input, .edit-profile__container textarea {
   border-radius: 10px;
   font-size: 1.5rem;
-  padding: 5px;
+  padding: 10px;
 }
 
 .edit-profile__container textarea {

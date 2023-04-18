@@ -97,7 +97,9 @@ class EditProfile extends Component {
                 <h2>Editar perfil</h2>
                 <form className='edit-profile__container'>
                   <div className='edit-profile__image'>
-                    <img src={image} alt={name}/>
+                    <div className='profile-image__container'>
+                      <img src={image} alt={name}/>
+                    </div>
                     <label htmlFor="">Image URL</label>
                     <input
                       type="text"
