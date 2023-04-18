@@ -94,7 +94,7 @@ class EditProfile extends Component {
             ? (<Loading />)
             : (
               <section >
-                <h2>Editar perfil</h2>
+                <h2>Edit profile</h2>
                 <form className='edit-profile__container'>
                   <div className='edit-profile__image'>
                     <div className='profile-image__container'>
@@ -142,7 +142,7 @@ class EditProfile extends Component {
                       disabled={ !fieldsValid }
                       onClick={ this.handleSubmit }
                     >
-                      Salvar alterações
+                      Save changes
                     </button>
                   </div>
                 </form>
