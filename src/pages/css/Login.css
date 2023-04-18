@@ -57,3 +57,98 @@
   top: 4%;
   width: 160px;
 }
+
+@media screen and ( max-width : 321px ) {
+
+  .login__container {
+    height: 60vh;
+    justify-content: center;
+    position: relative;
+    top: 20vh;
+    width: 90vw;
+  }
+
+  .login__form {
+    height: 140px;
+  }
+
+  .login__form input, .login__form button {
+    padding: 5px;
+    width: 260px;
+  }
+
+  .login__title {
+    position: absolute;
+    top: -15%;
+  }
+
+  .login__logo {
+    position: absolute;
+    top: 4%;
+    width: 100px;
+  }
+}
+
+@media ( min-width : 321px ) and ( max-width : 768px ) {
+
+  .login__container {
+    height: 60vh;
+    justify-content: center;
+    position: relative;
+    top: 20vh;
+    width: 90vw;
+  }
+
+  .login__form {
+    height: 140px;
+  }
+
+  .login__form input, .login__form button {
+    padding: 5px;
+    width: 260px;
+  }
+
+  .login__title {
+    position: absolute;
+    top: -15%;
+  }
+
+  .login__logo {
+    position: absolute;
+    top: 4%;
+    width: 160px;
+  }
+
+}
+
+@media ( min-width : 768px ) and ( max-width : 1024px ) {
+
+  .login__container {
+    height: 60vh;
+    justify-content: center;
+    position: relative;
+    top: 20vh;
+    width: 90vw;
+  }
+
+  .login__form {
+    height: 140px;
+  }
+
+  .login__form input, .login__form button {
+    padding: 5px;
+    width: 260px;
+  }
+
+  .login__title {
+    position: absolute;
+    top: -15%;
+  }
+
+  .login__logo {
+    position: absolute;
+    top: 4%;
+    width: 160px;
+  }
+
+}
