@@ -28,10 +28,10 @@ export const getUser = () => new Promise((resolve) => {
 
 export const createUser = (user) => new Promise((resolve) => {
   const emptyUser = {
-    name: '',
-    email: '',
-    image: '',
-    description: '',
+    name: 'User Name',
+    email: 'user-email@email.com',
+    image: 'https://www.pngitem.com/pimgs/m/22-223968_default-profile-picture-circle-hd-png-download.png',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.',
   };
   saveUser({ ...emptyUser, ...user });
   simulateRequest(SUCCESS_STATUS)(resolve);
