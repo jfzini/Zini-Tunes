@@ -47,19 +47,45 @@ header {
 
 @media ( max-width : 768px ) {
 
+  header {
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    margin-left: 20px;
+  }
+
   .header__navbar {
     display: none;
   }
 
   .header__navbar.show-menu {
-    background-color: red;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.87);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgb(78, 78, 78);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 80vh;
     min-width: 80vw;
-    position: relative;
+    position: absolute;
     right: 10vw;
-    top: 50vh;
+    top: 10vh;
+    transition: all 0.3s linear;
+    z-index: 3;
+  }
+
+  .header__navbar.show-menu a {
+    background-color: rgb(53, 53, 53);
+    margin: 20px;
+    text-align: center;
+    width: 60%;
+  }
+
+  .header__navbar a:hover {
+    background-color: rgba(245, 245, 245, 0.89);
+    color: rgb(20, 20, 20);
   }
 
   .hamburger {
