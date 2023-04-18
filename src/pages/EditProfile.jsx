@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import { getUser, updateUser } from '../services/userAPI';
+import './css/EditProfile.css'
 
 class EditProfile extends Component {
   state = {
@@ -92,10 +93,11 @@ class EditProfile extends Component {
           {isLoading
             ? (<Loading />)
             : (
-              <section className='profile__container'>
-                <form>
-                  <h2>Editar perfil</h2>
+              <section >
+                <h2>Editar perfil</h2>
+                <form className='edit-profile__container'>
                   <div className='edit-profile__image'>
+                    <img src={image} alt={name}/>
                     <label htmlFor="">Image URL</label>
                     <input
                       type="text"
@@ -104,7 +106,6 @@ class EditProfile extends Component {
                       data-testid="edit-input-image"
                       onChange={ this.handleChange }
                     />
-                    <img src={image} alt={name}/>
                   </div>
                   <div className='profile__data'>
                     <label htmlFor="">Name</label>

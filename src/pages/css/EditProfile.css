@@ -1,0 +1,74 @@
+.edit-profile__image {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: center;
+  width: 400px;
+}
+
+.edit-profile__image img {
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px black , 5px 5px 10px black , 5px 5px 5px black;
+  height: 300px;
+  width: 300px;
+}
+
+.edit-profile__container {
+  display: flex;
+  justify-content: space-around;
+  margin-block: 40px;
+}
+
+.edit-profile__container label {
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+
+.edit-profile__container input, .edit-profile__container textarea {
+  border-radius: 10px;
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.edit-profile__container textarea {
+  height: 250px;
+  resize: none;
+}
+
+.edit-profile__container button {
+  animation: changeBorderColor 6s linear infinite;
+  background-color: black;
+  border-radius: 40px;
+  color: #00ff80;
+  display: block;
+  font-size: 1.5rem;
+  margin: 20px auto 40px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out , background-color 0.2s ease-in-out;
+  width: 250px;
+}
+
+.edit-profile__container button:disabled {
+  animation: none;
+  border: 2px solid gray;
+  color: gray;
+}
+
+.edit-profile__container button:hover {
+  background-color: #00ff80e3;
+  color: black;
+  cursor: pointer;
+}
+
+.edit-profile__container button:active {
+  transform: translateY(5px);
+}
+
+
+.profile__data {
+  display: flex;
+  flex-direction: column;
+}
