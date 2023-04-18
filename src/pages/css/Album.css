@@ -26,3 +26,42 @@
   font-size: 2rem;
   margin: 45px;
 }
+
+@media screen and ( max-width : 768px ) {
+
+  .album__container {
+    max-width: 85vw;
+  }
+
+  .album__data {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .album__data img {
+    height: 63vw;
+    width: 63vw;
+  }
+
+  .album__name {
+    font-size: 2rem;
+    margin: 20px -10px 0;
+    width: 80vw;
+  }
+
+  .artist__name {
+    font-size: 1.5rem;
+    margin: 10px -10px;
+    width: 80vw;
+  }
+
+}
+
+@media ( min-width : 768px ) and ( max-width : 1024px ) {
+
+  .album__container {
+    max-width: 85vw;
+  }
+
+
+}
