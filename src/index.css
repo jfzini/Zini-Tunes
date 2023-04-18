@@ -117,6 +117,33 @@ h2 {
   font-size: 3rem;
 }
 
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2e2e2e;
+  border-radius: 100vw;
+  margin-block: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #00e5c6;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #00ccff;
+}
+
+::-webkit-scrollbar {
+
+}
+
+::-webkit-scrollbar {
+
+}
+
 .loading {
   align-items: center;
   display: flex;

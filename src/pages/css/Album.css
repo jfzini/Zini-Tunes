@@ -24,9 +24,3 @@
   font-size: 2rem;
   margin: 45px;
 }
-
-.music-cards__container {
-  border: 1px solid red;
-  height: 400px;
-  overflow-y: auto;
-}
