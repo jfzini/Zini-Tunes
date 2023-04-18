@@ -54,3 +54,69 @@
 .link:active {
   transform: translateY(5px);
 }
+
+@media screen and ( max-width : 768px ) {
+
+  .profile__container {
+    align-items: center;
+    flex-direction: column;
+    margin-left: -6vw;
+  }
+
+  .profile__label {
+    color: rgb(173, 173, 173);
+    margin-top: 20px;
+  }
+
+  .profile__name {
+    font-size: 1.5rem;
+  }
+
+  .profile__email, .profile__description {
+    font-size: 1.3rem;
+  }
+
+  .profile__image, .profile__image img {
+    height: 75vw;
+    margin-top: -8px;
+    width: 75vw;
+  }
+
+  .profile__data {
+    margin-top: 20px;
+    padding-inline: 20px;
+    width: 75vw;
+  }
+
+  .link {
+    animation: changeBorderColor 6s linear infinite;
+    border-radius: 40px;
+    color: #00ff80;
+    display: block;
+    font-size: 1.5rem;
+    margin: 20px auto 40px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out , background-color 0.2s ease-in-out;
+    width: 200px;
+  }
+
+  .link:hover {
+    background-color: #00ff80e3;
+    color: black;
+  }
+
+  .link:active {
+    transform: translateY(5px);
+  }
+
+}
+
+@media ( min-width : 768px ) and ( max-width : 1024px ) {
+
+  .album__container {
+    max-width: 85vw;
+  }
+
+}
