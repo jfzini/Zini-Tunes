@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import Favorites from './pages/Favorites';
 import Album from './pages/Album';
 import Profile from './pages/Profile';
-import ProfileEdit from './pages/ProfileEdit';
+import EditProfile from './pages/EditProfile';
 import Search from './pages/Search';
 import NotFound from './pages/NotFound';
 import { createUser } from './services/userAPI';
@@ -40,7 +40,7 @@ class App extends React.Component {
           <Route exact path="/album/:id" component={ Album } />
           <Route exact path="/favorites" component={ Favorites } />
           <Route exact path="/profile" component={ Profile } />
-          <Route exact path="/profile/edit" component={ ProfileEdit } />
+          <Route exact path="/profile/edit" component={ EditProfile } />
           <Route exact path="/*" component={ NotFound } />
         </Switch>
       </BrowserRouter>
