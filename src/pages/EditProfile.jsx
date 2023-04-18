@@ -93,7 +93,7 @@ class EditProfile extends Component {
           {isLoading
             ? (<Loading />)
             : (
-              <section >
+              <section className='edit-profile__general'>
                 <h2>Edit profile</h2>
                 <form className='edit-profile__container'>
                   <div className='edit-profile__image'>

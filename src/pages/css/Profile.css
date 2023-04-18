@@ -115,8 +115,9 @@
 
 @media ( min-width : 768px ) and ( max-width : 1024px ) {
 
-  .album__container {
-    max-width: 85vw;
+  .profile__image, .profile__image img {
+    height: 35vw;
+    width: 35vw;
   }
 
 }

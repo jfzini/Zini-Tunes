@@ -73,8 +73,151 @@
   transform: translateY(5px);
 }
 
-
 .profile__data {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and ( max-width : 321px ) {
+
+  .profile-image__container {
+    max-height: 230px;
+    max-width: 230px;
+  }
+
+  .profile-image__container img {
+    max-height: 230px;
+    max-width: 230px;
+  }
+
+  .edit-profile__general {
+    margin-left: -20px;
+    max-width: 230px;
+  }
+
+  .edit-profile__container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .edit-profile__container label {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+
+  .edit-profile__container input, .edit-profile__container textarea {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .edit-profile__container textarea {
+    height: 200px;
+  }
+
+  .edit-profile__image {
+    margin-top: -40px;
+  }
+
+  .edit-profile__container button {
+    font-size: 1.3rem;
+    padding: 8px;
+    width: 200px;
+  }
+}
+
+@media ( min-width : 321px ) and ( max-width : 687px ) {
+
+  .profile-image__container {
+    max-height: 250px;
+    max-width: 250px;
+  }
+
+  .profile-image__container img {
+    max-height: 250px;
+    max-width: 250px;
+  }
+
+  .edit-profile__general {
+    max-width: 250px;
+  }
+
+  .edit-profile__container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .edit-profile__container label {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+
+  .edit-profile__container input, .edit-profile__container textarea {
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .edit-profile__container textarea {
+    height: 200px;
+  }
+
+  .edit-profile__image {
+    margin-top: -40px;
+  }
+
+  .edit-profile__container button {
+    font-size: 1.3rem;
+    padding: 8px;
+    width: 200px;
+  }
+}
+
+@media ( min-width : 688px ) and ( max-width : 1024px ) {
+
+  .profile-image__container {
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px black , 5px 5px 10px black , 5px 5px 5px black;
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  .profile-image__container img {
+    max-height: 200px;
+    max-width: 200px;
+  }
+
+  .edit-profile__container {
+    display: flex;
+    justify-content: space-around;
+    margin-block: 40px;
+  }
+
+  .edit-profile__general {
+    max-width: 75vw;
+  }
+
+  .edit-profile__container label {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+
+  .edit-profile__container input, .edit-profile__container textarea {
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 5px;
+  }
+
+  .edit-profile__container textarea {
+    height: 200px;
+  }
+
+  .edit-profile__container button {
+    font-size: 1.2rem;
+    margin: 20px auto;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out , background-color 0.2s ease-in-out;
+    width: 150px;
+  }
+
 }

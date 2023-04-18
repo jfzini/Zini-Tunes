@@ -51,7 +51,7 @@ class Profile extends Component {
                   <p className='profile__email'>{email}</p>
                   <p className='profile__label'>Description</p>
                   <p className='profile__description'>{description}</p>
-                  <Link to="/profile/edit" className='link'>Editar perfil</Link>
+                  <Link to="/profile/edit" className='link'>Edit profile</Link>
                 </div>
               </section>
             )}
