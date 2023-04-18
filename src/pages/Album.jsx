@@ -81,7 +81,7 @@ class Album extends Component {
                     {artist ? `${artist}` : ''}</p>
                 </div>
               </div>
-              <div>
+              <div className='music-cards__container'>
                 {slicedAlbumData
                   ? slicedAlbumData.map((element) => (
                     <MusicCard

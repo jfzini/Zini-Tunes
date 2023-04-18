@@ -33,6 +33,21 @@
   }
 }
 
+@keyframes changeCheckboxBgColor {
+
+  0%, 100% {
+    fill: #00b0e5;
+  }
+
+  33% {
+    fill: #00f7ff;
+  }
+
+  66% {
+    fill: #00ff80;
+  }
+}
+
 @keyframes float {
 
   0%, 100% {

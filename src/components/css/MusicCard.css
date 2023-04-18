@@ -1,0 +1,95 @@
+audio {
+  background-color: rgba(128, 128, 128, 0.61);
+  border-radius: 40px;
+  margin-right: 20px;
+  padding: 15px;
+  transition: all 0.5s ease-in-out;
+  width: 970px;
+}
+
+audio:focus {
+  animation: changeBgColor 3s linear infinite;
+}
+
+audio::-webkit-media-controls-panel {
+  animation: changeBgColor 3s linear infinite;
+}
+
+.audio-track {
+  align-items: center;
+  display: flex;
+}
+
+.checkbox__container input {
+  cursor: pointer;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+
+.checkbox__container {
+  cursor: pointer;
+  display: block;
+  font-size: 20px;
+  position: relative;
+  transition: 100ms;
+  user-select: none;
+}
+
+.checkmark {
+  animation: dislike_effect 400ms ease;
+  height: 2em;
+  left: 0;
+  top: 0;
+  transition: 100ms;
+  width: 2em;
+}
+
+.checkbox__container input:checked ~ .checkmark path {
+  animation: changeCheckboxBgColor 6s linear infinite;
+  stroke-width: 0;
+}
+
+.checkbox__container input:checked ~ .checkmark {
+  animation: like_effect 400ms ease;
+}
+
+.checkbox__container:hover {
+  transform: scale(1.1);
+}
+
+.track-name {
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+
+@keyframes like_effect {
+
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes dislike_effect {
+
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
