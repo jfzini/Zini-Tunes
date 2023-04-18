@@ -42,5 +42,15 @@
   padding: 15px;
   text-align: center;
   text-decoration: none;
+  transition: color 0.2s ease-in-out , background-color 0.2s ease-in-out;
   width: 200px;
+}
+
+.link:hover {
+  background-color: #00ff80e3;
+  color: black;
+}
+
+.link:active {
+  transform: translateY(5px);
 }
