@@ -44,3 +44,49 @@ header {
   font-size: 1.7rem;
   width: 30vw;
 }
+
+@media ( max-width : 768px ) {
+
+  .header__navbar {
+    display: none;
+  }
+
+  .header__navbar.show-menu {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    min-width: 80vw;
+    position: relative;
+    right: 10vw;
+    top: 50vh;
+  }
+
+  .hamburger {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 5vw;
+  }
+
+  .hamburger span {
+    background-color: whitesmoke;
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+    transition: transform 0.2s , opacity 0.2s;
+    width: 30px;
+  }
+
+  .hamburger.active span:first-child {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child( 2 ) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

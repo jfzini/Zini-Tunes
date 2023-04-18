@@ -9,6 +9,7 @@ class Header extends Component {
   state = {
     userName: '',
     isLoading: true,
+    showMenu: false,
   };
 
   async componentDidMount() {
@@ -25,8 +26,14 @@ class Header extends Component {
     return fetchUser;
   };
 
+  setShowMenu = () => {
+    this.setState(prevState => ({
+      showMenu: !prevState.showMenu,
+    }))
+  }
+
   render() {
-    const { userName, isLoading } = this.state;
+    const { userName, isLoading, showMenu } = this.state;
 
     return (
       <header data-testid="header-component">
@@ -42,12 +49,20 @@ class Header extends Component {
               </div>
             )}
         </div>
-        <nav className="header__navbar">
+        <nav className={`header__navbar ${showMenu? 'show-menu' : ''}` }>
           <Link to="/search" data-testid="link-to-search">Search</Link>
           <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
           <Link to="/profile" data-testid="link-to-profile">Profile</Link>
           <a href='/'>Logout</a>
         </nav>
+        <div
+          className={ `hamburger ${showMenu ? 'active' : ''}` }
+          onClick={ this.setShowMenu }
+        >
+          <span /> {/*spans that make the hamburger menu*/}
+          <span />
+          <span />
+        </div>
       </header>
     );
   }
