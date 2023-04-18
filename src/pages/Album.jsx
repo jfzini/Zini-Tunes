@@ -72,13 +72,16 @@ class Album extends Component {
                 <div>
                   <p
                     data-testid="album-name"
-                    className='album__name'
-                  >{albumName ? `${albumName}` : ''}</p>
+                    className="album__name"
+                  >
+                    {albumName ? `${albumName}` : ''}
+                  </p>
                   <p
                     data-testid="artist-name"
-                    className='artist__name'
+                    className="artist__name"
                   >
-                    {artist ? `${artist}` : ''}</p>
+                    {artist ? `${artist}` : ''}
+                  </p>
                 </div>
               </div>
               <div>

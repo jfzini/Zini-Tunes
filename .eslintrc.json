@@ -1,4 +1,14 @@
 {
   "extends": "@trybe/eslint-config-frontend",
-  "ignorePatterns": ["tests"]
+  "ignorePatterns": ["tests"],
+  "rules": {
+    "react/jsx-max-depth": ["error", { "max": 5 }],
+    "max-len": ["error", {
+      "code": 90,
+      "ignoreComments": true,
+      "ignoreUrls": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    }]
+  }
 }
