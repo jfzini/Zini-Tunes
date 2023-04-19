@@ -41,10 +41,6 @@ In this project, React Router, component lifecycle, asynchronous JavaScript, and
 
 A good amount of time was spent making the application responsive on different types of devices, as shown in the video.
 
-## Feats in development 🚧
-
-I'm currently working on the game itself, so the user can play against the machine. Watch this repository to keep track of it.
-
 
 ## Show your support
 
